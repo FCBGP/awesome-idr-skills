@@ -1,15 +1,10 @@
-# Scientific Agent Skills
+# Awesome IDR Skills
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
-[![Version](https://img.shields.io/badge/Version-2.52.0-blue.svg)](pyproject.toml)
 [![Skills](https://img.shields.io/badge/Skills-72-brightgreen.svg)](#-available-skills)
-[![Databases](https://img.shields.io/badge/Databases-78%2B-orange.svg)](#-available-skills)
 [![Agent Skills](https://img.shields.io/badge/Standard-Agent_Skills-blueviolet.svg)](https://agentskills.io/)
-[![Security Scan](https://github.com/K-Dense-AI/scientific-agent-skills/actions/workflows/security-scan.yml/badge.svg)](https://github.com/K-Dense-AI/scientific-agent-skills/actions/workflows/security-scan.yml)
 [![Works with](https://img.shields.io/badge/Works_with-Cursor_|_Claude_Code_|_Codex_|_Google_Antigravity-blue.svg)](#-getting-started)
-[![X](https://img.shields.io/badge/Follow_on_X-%40k__dense__ai-000000?logo=x)](https://x.com/k_dense_ai)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-K--Dense_Inc.-0A66C2?logo=linkedin)](https://www.linkedin.com/company/k-dense-inc)
-[![YouTube](https://img.shields.io/badge/YouTube-K--Dense_Inc.-FF0000?logo=youtube)](https://www.youtube.com/@K-Dense-Inc)
+
 
 **A curated collection of 72 scientific and research skills for any AI agent that supports the open [Agent Skills](https://agentskills.io/) standard.** Built by [K-Dense](https://k-dense.ai) and working with **Cursor, Claude Code, Codex, Google Antigravity, and more**, these skills turn your coding agent into a research assistant that can run multi-step scientific workflows — searching the literature, querying 78+ public databases, analyzing data, training models, and producing publication-ready figures, papers, and reports.
 
@@ -24,13 +19,9 @@
 - [Why Use This?](#-why-use-this)
 - [Getting Started](#-getting-started)
 - [Prerequisites](#-prerequisites)
-- [Security Disclaimer](#%EF%B8%8F-security-disclaimer)
 - [Quick Examples](#-quick-examples)
 - [Available Skills](#-available-skills)
 - [Contributing](#-contributing)
-- [Troubleshooting](#-troubleshooting)
-- [FAQ](#-faq)
-- [Citation](#-citation)
 - [License](#-license)
 
 ---
@@ -118,29 +109,6 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ```
 
 Verify with `uv --version`. For more options, see the [official uv docs](https://docs.astral.sh/uv/).
-
----
-
-## ⚠️ Security Disclaimer
-
-> **Skills can execute code and influence your agent's behavior. Review what you install.**
-
-Agent Skills can instruct your AI agent to run code, install packages, make network requests, and modify files. A malicious or poorly written skill could steer your agent into harmful behavior.
-
-We run LLM-based security scans (via the [Cisco AI Defense Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner)) on every skill in this repo and review contributions before merging. But as a small team, we can't guarantee every skill has been exhaustively reviewed. **It is ultimately your responsibility to review the skills you install.**
-
-We recommend:
-
-- **Install only what you need** rather than the whole collection.
-- **Read the `SKILL.md`** before installing — it describes what the skill does, which packages it uses, and which external services it touches.
-- **Scan third-party skills yourself:**
-  ```bash
-  uv pip install cisco-ai-skill-scanner
-  skill-scanner scan /path/to/skill --use-behavioral
-  ```
-- **Report anything suspicious** by [opening an issue](https://github.com/K-Dense-AI/scientific-agent-skills/issues).
-
-Skills are re-scanned roughly weekly, with results tracked in [SECURITY.md](SECURITY.md).
 
 ---
 
@@ -296,98 +264,9 @@ This repository contains **72 skills**. The listings below are *explicitly defin
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for repository structure, required `SKILL.md` frontmatter, the Agent Skills specification, versioning, validation, and security scanning.
-
-**Quick checklist:**
-
-1. **Fork** the repo and create a feature branch.
-2. **Follow** [CONTRIBUTING.md](CONTRIBUTING.md) and the [Agent Skills Specification](https://agentskills.io/specification) — valid `SKILL.md` frontmatter, naming conventions, and directory structure.
-3. **Include** a quoted `metadata.version`; increment it when updating an existing skill.
-4. **Test** all code examples and workflows.
-5. **Scan** your skill before submitting:
-   ```bash
-   uv pip install cisco-ai-skill-scanner
-   skill-scanner scan /path/to/your/skill --use-behavioral
-   ```
-6. **Open** a pull request with a clear description.
-
-This project stands on **50+ open source projects**. If these skills help you, please consider [supporting the projects we depend on](docs/open-source-sponsors.md) by starring, sponsoring, citing, and contributing.
-
----
-
-## 🔧 Troubleshooting
-
-**Skills not loading**
-- Confirm the skill folders are in the correct directory for your host (see [Getting Started](#-getting-started)) and each contains a `SKILL.md`.
-- Restart your agent/IDE after installing.
-
-**Missing Python dependencies**
-- Check the skill's `SKILL.md` for required packages and install with `uv pip install <package>`.
-
-**API rate limits or auth errors**
-- Many databases have rate limits and some services require API keys. Review the relevant `SKILL.md` for setup and consider caching or batching.
-
-**Install path issues (v2.43.0+)**
-- Skills live under `skills/` (not the older `scientific-skills/`). Update manual copy paths and re-run `gh skill install K-Dense-AI/scientific-agent-skills`.
-
----
-
-## ❓ FAQ
-
-**Is this free to use?**
-Yes — the repository is MIT licensed. Each skill also has its own license in the `license` field of its `SKILL.md`; review those before use.
-
-**Do I need to install all the skills or Python packages?**
-No. Install only the skills you need; each one specifies its own requirements in its `SKILL.md`.
-
-**Can I use this with agents other than Claude Code?**
-Yes. The skills follow the open [Agent Skills](https://agentskills.io/) standard and work with any compatible host (Cursor, Codex, Gemini CLI, Google Antigravity, OpenClaw, Pi, and more).
-
-**Do the skills work offline?**
-Package skills work offline once dependencies are installed. Database and web-search skills require internet access.
-
-**Can I contribute my own skill?**
-Absolutely — see [Contributing](#-contributing).
-
----
-
-## 📖 Citation
-
-If you use Scientific Agent Skills in your research, please cite the collection and any individual skills that materially supported your work.
-
-### Collection (BibTeX)
-```bibtex
-@software{scientific_agent_skills_2026,
-  author = {{K-Dense Inc.}},
-  title  = {Scientific Agent Skills: A Collection of Scientific Tools for AI Agents},
-  year   = {2026},
-  url    = {https://github.com/K-Dense-AI/scientific-agent-skills},
-  note   = {72 skills covering databases, packages, and analysis tools}
-}
-```
-
-### Individual skill
-Include the skill name, the `metadata.version` from its `SKILL.md`, and the direct URL, e.g. `https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/database-lookup`.
-
----
-
 ## 📄 License
 
-Licensed under the **MIT License** — © 2026 K-Dense Inc. ([k-dense.ai](https://k-dense.ai/)). See [LICENSE.md](LICENSE.md).
+Licensed under the **MIT License** .
 
 > ⚠️ **Individual skills may carry different licenses.** Each skill's license is in the `license` field of its `SKILL.md`. You are responsible for reviewing and complying with those terms.
 
----
-
-## 💬 Support & Updates
-
-- 📖 **Docs:** the relevant `SKILL.md` and `references/` folders, plus [docs/skills.md](docs/skills.md) and [docs/examples.md](docs/examples.md)
-- 🐛 **Issues & requests:** [GitHub Issues](https://github.com/K-Dense-AI/scientific-agent-skills/issues)
-- 💼 **Enterprise support:** [K-Dense](https://k-dense.ai/)
-- 📣 **Stay in the loop:** [X](https://x.com/k_dense_ai) · [LinkedIn](https://www.linkedin.com/company/k-dense-inc) · [YouTube](https://www.youtube.com/@K-Dense-Inc)
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=K-Dense-AI/scientific-agent-skills&type=date&legend=top-left)](https://www.star-history.com/#K-Dense-AI/scientific-agent-skills&type=date&legend=top-left)
