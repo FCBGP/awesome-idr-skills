@@ -232,6 +232,8 @@ This repository contains **72 skills**. The listings below are *explicitly defin
 - **markdown-mermaid-writing** — Text-based diagrams and documents with style guides, diagram references, and templates.
 - **infographics** — Professional infographics (10 types, 8 styles, colorblind-safe palettes).
 - **generate-image** — General-purpose AI image generation and editing (FLUX, Nano Banana).
+- **ppt-master** - AI-driven multi-format SVG content generation system. Converts source documents into high-quality SVG pages through multi-role collaboration and exports to PPTX.
+- **cyber-ppt** - a Codex Skill for turning documents, research materials, and business data into high-density, editable, consulting-style PowerPoint presentations.
 
 ### 📊 Data Processing & Visualization (7)
 - **polars** — High-performance, expression-based DataFrames with lazy/streaming execution.
@@ -386,6 +388,8 @@ Licensed under the **MIT License** — © 2026 K-Dense Inc. ([k-dense.ai](https:
 - 💼 **Enterprise support:** [K-Dense](https://k-dense.ai/)
 - 📣 **Stay in the loop:** [X](https://x.com/k_dense_ai) · [LinkedIn](https://www.linkedin.com/company/k-dense-inc) · [YouTube](https://www.youtube.com/@K-Dense-Inc)
 
+<!--
 ## ⭐ Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=FCBGP/awsome-idr-skills&type=date&legend=top-left)](https://www.star-history.com/#FCBGP/awsome-idr-skills&type=date&legend=top-left)
+-->
