@@ -1,15 +1,12 @@
 # Scientific Agent Skills
 
+> THIS is a minimal fork from [K-Dense](https://k-dense.ai) with personality requirements.
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 [![Version](https://img.shields.io/badge/Version-2.52.0-blue.svg)](pyproject.toml)
 [![Skills](https://img.shields.io/badge/Skills-72-brightgreen.svg)](#-available-skills)
 [![Databases](https://img.shields.io/badge/Databases-78%2B-orange.svg)](#-available-skills)
-[![Agent Skills](https://img.shields.io/badge/Standard-Agent_Skills-blueviolet.svg)](https://agentskills.io/)
 [![Security Scan](https://github.com/FCBGP/awsome-idr-skills/actions/workflows/security-scan.yml/badge.svg)](https://github.com/FCBGP/awsome-idr-skills/actions/workflows/security-scan.yml)
-[![Works with](https://img.shields.io/badge/Works_with-Cursor_|_Claude_Code_|_Codex_|_Google_Antigravity-blue.svg)](#-getting-started)
-[![X](https://img.shields.io/badge/Follow_on_X-%40k__dense__ai-000000?logo=x)](https://x.com/k_dense_ai)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-K--Dense_Inc.-0A66C2?logo=linkedin)](https://www.linkedin.com/company/k-dense-inc)
-[![YouTube](https://img.shields.io/badge/YouTube-K--Dense_Inc.-FF0000?logo=youtube)](https://www.youtube.com/@K-Dense-Inc)
 
 **A curated collection of 72 scientific and research skills for any AI agent that supports the open [Agent Skills](https://agentskills.io/) standard.** Built by [K-Dense](https://k-dense.ai) and working with **Cursor, Claude Code, Codex, Google Antigravity, and more**, these skills turn your coding agent into a research assistant that can run multi-step scientific workflows — searching the literature, querying 78+ public databases, analyzing data, training models, and producing publication-ready figures, papers, and reports.
 
