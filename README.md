@@ -13,6 +13,7 @@ A curated collection of **77** scientific and research skills for any AI agent t
 - [Prerequisites](#-prerequisites)
 - [Security Disclaimer](#%EF%B8%8F-security-disclaimer)
 - [Quick Examples](#-quick-examples)
+- [Tutorials: How to Use the Skills](#-tutorials-how-to-use-the-skills)
 - [Available Skills](#-available-skills)
 - [Contributing](#-contributing)
 - [Troubleshooting](#-troubleshooting)
@@ -180,6 +181,27 @@ Reproduce the experiments in this paper PDF with paper-reproduction-flow, and wr
 up the results as a Chinese research report with research-report-word.
 ```
 **Skills used:** paper-reproduction-flow, research-report-word
+
+---
+
+## 🎓 Tutorials: How to Use the Skills
+
+Hands-on guides with a **use-case scenario for every skill**, organized by category — see [tutorials/README.md](tutorials/README.md) for the full index.
+
+| # | Category | Guide |
+|---|---|---|
+| 01 | 🗄️ Databases & Data Access | [tutorials/01-databases.md](tutorials/01-databases.md) |
+| 02 | 🔎 Literature & Web Search | [tutorials/02-literature-search.md](tutorials/02-literature-search.md) |
+| 03 | ✍️ Scientific Writing & Evaluation | [tutorials/03-scientific-writing.md](tutorials/03-scientific-writing.md) |
+| 04 | 📄 Documents | [tutorials/04-documents.md](tutorials/04-documents.md) |
+| 05 | 🎨 Presentations & Visuals | [tutorials/05-presentations.md](tutorials/05-presentations.md) |
+| 06 | 📊 Data Processing & Visualization | [tutorials/06-data-processing.md](tutorials/06-data-processing.md) |
+| 07 | 📐 Statistics & Experimental Design | [tutorials/07-statistics.md](tutorials/07-statistics.md) |
+| 08 | 🤖 Machine Learning & AI | [tutorials/08-machine-learning.md](tutorials/08-machine-learning.md) |
+| 09 | 🌍 Geospatial Science | [tutorials/09-geospatial.md](tutorials/09-geospatial.md) |
+| 10 | 🧮 Simulation & Mathematics | [tutorials/10-simulation-math.md](tutorials/10-simulation-math.md) |
+| 11 | ⚙️ Infrastructure & Platforms | [tutorials/11-infrastructure.md](tutorials/11-infrastructure.md) |
+| 12 | 🎓 Research Methodology & Ideation | [tutorials/12-research-methodology.md](tutorials/12-research-methodology.md) |
 
 ---
 
