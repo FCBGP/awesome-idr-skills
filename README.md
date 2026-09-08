@@ -1,18 +1,8 @@
 # Scientific Agent Skills
 
-> THIS is a minimal fork from [K-Dense](https://k-dense.ai) with personality requirements.
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
-[![Version](https://img.shields.io/badge/Version-2.52.0-blue.svg)](pyproject.toml)
-[![Skills](https://img.shields.io/badge/Skills-72-brightgreen.svg)](#-available-skills)
-[![Databases](https://img.shields.io/badge/Databases-78%2B-orange.svg)](#-available-skills)
-[![Security Scan](https://github.com/FCBGP/awsome-idr-skills/actions/workflows/security-scan.yml/badge.svg)](https://github.com/FCBGP/awsome-idr-skills/actions/workflows/security-scan.yml)
-
-**A curated collection of 72 scientific and research skills for any AI agent that supports the open [Agent Skills](https://agentskills.io/) standard.** Built by [K-Dense](https://k-dense.ai) and working with **Cursor, Claude Code, Codex, Google Antigravity, and more**, these skills turn your coding agent into a research assistant that can run multi-step scientific workflows — searching the literature, querying 78+ public databases, analyzing data, training models, and producing publication-ready figures, papers, and reports.
+A curated collection of **77** scientific and research skills for any AI agent that supports the open [Agent Skills](https://agentskills.io/) standard. These skills turn your coding agent into a research assistant that can run multi-step scientific workflows — searching the literature, querying public databases, analyzing data, training models, and producing publication-ready figures, papers, and reports.
 
 > The agent can already write code with any Python package or call any API. These skills add curated documentation, working examples, and best practices so common research workflows run faster and more reliably.
-
-> ⭐ **If these skills save you time, please [star the repo](https://github.com/FCBGP/awsome-idr-skills).** It helps other scientists find the project and tells us which workflows are worth expanding.
 
 ---
 
@@ -27,7 +17,6 @@
 - [Contributing](#-contributing)
 - [Troubleshooting](#-troubleshooting)
 - [FAQ](#-faq)
-- [Citation](#-citation)
 - [License](#-license)
 
 ---
@@ -38,7 +27,7 @@
 - **Run multi-step workflows from one prompt** — chain literature search, database lookups, analysis, modeling, and reporting in a single request.
 - **Reproducible by design** — the `database-lookup` skill makes deterministic REST calls with explicit endpoints, filters, pagination, and provenance.
 - **Portable across agents** — one open standard, many hosts (Cursor, Claude Code, Codex, Gemini CLI, Google Antigravity, OpenClaw, Pi, and more).
-- **Actively maintained** — continuously updated and security-scanned by the K-Dense team and community contributors.
+- **Actively maintained** — continuously updated and security-scanned by the maintainers and community contributors.
 
 ---
 
@@ -185,11 +174,18 @@ ARIMA baseline from statsmodels, and visualize forecasts with prediction interva
 ```
 **Skills used:** timesfm-forecasting, statsmodels, scientific-visualization
 
+### 📄 Paper Reproduction
+```
+Reproduce the experiments in this paper PDF with paper-reproduction-flow, and write
+up the results as a Chinese research report with research-report-word.
+```
+**Skills used:** paper-reproduction-flow, research-report-word
+
 ---
 
 ## 📚 Available Skills
 
-This repository contains **72 skills**. The listings below are *explicitly defined* skills — curated with documentation, examples, and best practices. They are not a ceiling: your agent can install and use any Python package or call any API even without a dedicated skill; these simply make common workflows faster and more dependable.
+This repository contains **77 skills**. The listings below are *explicitly defined* skills — curated with documentation, examples, and best practices. They are not a ceiling: your agent can install and use any Python package or call any API even without a dedicated skill; these simply make common workflows faster and more dependable.
 
 ### 🗄️ Databases & Data Access (2)
 - **database-lookup** — Deterministic REST access to 78 public scientific, biomedical, materials, regulatory, finance, and demographics databases (PubChem, ChEMBL, UniProt, PDB, AlphaFold, KEGG, Reactome, STRING, ClinVar, COSMIC, ClinicalTrials.gov, FDA, FRED, USPTO, SEC EDGAR, and more) with explicit filters, pagination, and provenance.
@@ -212,15 +208,17 @@ This repository contains **72 skills**. The listings below are *explicitly defin
 - **scholar-evaluation** — Quantitative scholarly assessment via the ScholarEval framework.
 - **venue-templates** — LaTeX templates and submission requirements for major journals, conferences, posters, and grants.
 
-### 📄 Documents (6)
+### 📄 Documents (8)
 - **pdf** — Read, create, merge/split, OCR, fill forms, and manipulate PDF files.
 - **docx** — Create, read, and edit Word documents with rich formatting.
 - **pptx** — Create, read, and edit PowerPoint presentations.
 - **xlsx** — Create, edit, and analyze Excel workbooks (formulas, multi-sheet, financial models).
 - **markitdown** — Convert PDF/Office/images/audio/HTML and more to Markdown.
 - **liteparse** — Local document/PDF parsing with bounding boxes, OCR, and layout-preserved JSON for RAG.
+- **report-word-format** — Generate Chinese research report Markdown and Word documents with fixed headings, figure/table captions, bibliography numbering, cross-references, three-line tables, and body-font inline code.
+- **research-report-word-skill** — Chinese research report (调研报告) Markdown and Word generation with the same fixed formatting spec as `report-word-format`.
 
-### 🎨 Presentations & Visuals (8)
+### 🎨 Presentations & Visuals (10)
 - **scientific-slides** — Slide decks for research talks (PowerPoint and LaTeX Beamer).
 - **latex-posters** — Conference posters in LaTeX (beamerposter, tikzposter, baposter).
 - **pptx-posters** — HTML/CSS posters exportable to PDF or PPTX.
@@ -229,8 +227,8 @@ This repository contains **72 skills**. The listings below are *explicitly defin
 - **markdown-mermaid-writing** — Text-based diagrams and documents with style guides, diagram references, and templates.
 - **infographics** — Professional infographics (10 types, 8 styles, colorblind-safe palettes).
 - **generate-image** — General-purpose AI image generation and editing (FLUX, Nano Banana).
-- **ppt-master** - AI-driven multi-format SVG content generation system. Converts source documents into high-quality SVG pages through multi-role collaboration and exports to PPTX.
-- **cyber-ppt** - a Codex Skill for turning documents, research materials, and business data into high-density, editable, consulting-style PowerPoint presentations.
+- **ppt-master** — AI-driven multi-format SVG content generation system. Converts source documents (PDF/DOCX/URL/Markdown) into high-quality SVG pages through multi-role collaboration and exports to PPTX.
+- **cyber-ppt** — Turns DOCX/PDF/TXT/XLSX/research materials/business data into high-density, editable, consulting-style PowerPoint presentations with evidence chains and quality checks.
 
 ### 📊 Data Processing & Visualization (7)
 - **polars** — High-performance, expression-based DataFrames with lazy/streaming execution.
@@ -278,7 +276,7 @@ This repository contains **72 skills**. The listings below are *explicitly defin
 - **pi-agent** — Build with and use Pi, the minimal terminal coding harness (SDK, RPC, extensions, packages).
 - **autoskill** — Detect repeated research workflows locally via screenpipe and draft new skills for them.
 
-### 🎓 Research Methodology & Ideation (9)
+### 🎓 Research Methodology & Ideation (10)
 - **scientific-brainstorming** — Open-ended creative research ideation and gap-finding.
 - **hypothesis-generation** — Structured, testable hypotheses with predictions and mechanisms.
 - **hypogenic** — Automated LLM-driven hypothesis generation and testing on tabular data.
@@ -288,6 +286,7 @@ This repository contains **72 skills**. The listings below are *explicitly defin
 - **arbor** — Autonomously improve an artifact against an evaluator via Hypothesis Tree Refinement, with a held-out gate against overfitting.
 - **research-grants** — Competitive proposals for NSF, NIH, DOE, DARPA, and Taiwan NSTC.
 - **open-notebook** — Self-hosted NotebookLM alternative for research notebooks, multi-source ingestion, and podcast generation.
+- **paper-reproduction-flow** — Multi-agent paper reproduction pipeline (Orchestrator + named subagents) for reproducing papers from a PDF/URL/text, with isolated dated run workspaces and effort tiers.
 
 > 📖 For full details on every skill, see its `SKILL.md` under [skills/](skills/).
 
@@ -309,8 +308,6 @@ Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for repository
    skill-scanner scan /path/to/your/skill --use-behavioral
    ```
 6. **Open** a pull request with a clear description.
-
-This project stands on **50+ open source projects**. If these skills help you, please consider supporting the projects we depend on by starring, sponsoring, citing, and contributing.
 
 ---
 
@@ -350,43 +347,10 @@ Absolutely — see [Contributing](#-contributing).
 
 ---
 
-## 📖 Citation
-
-If you use Scientific Agent Skills in your research, please cite the collection and any individual skills that materially supported your work.
-
-### Collection (BibTeX)
-```bibtex
-@software{scientific_agent_skills_2026,
-  author = {{K-Dense Inc.}},
-  title  = {Scientific Agent Skills: A Collection of Scientific Tools for AI Agents},
-  year   = {2026},
-  url    = {https://github.com/FCBGP/awsome-idr-skills},
-  note   = {72 skills covering databases, packages, and analysis tools}
-}
-```
-
-### Individual skill
-Include the skill name, the `metadata.version` from its `SKILL.md`, and the direct URL, e.g. `https://github.com/FCBGP/awsome-idr-skills/tree/main/skills/database-lookup`.
-
----
-
 ## 📄 License
 
-Licensed under the **MIT License** — © 2026 K-Dense Inc. ([k-dense.ai](https://k-dense.ai/)). See [LICENSE.md](LICENSE.md).
+Licensed under the **MIT License**. See [LICENSE.md](LICENSE.md).
 
 > ⚠️ **Individual skills may carry different licenses.** Each skill's license is in the `license` field of its `SKILL.md`. You are responsible for reviewing and complying with those terms.
 
 ---
-
-## 💬 Support & Updates
-
-- 📖 **Docs:** the relevant `SKILL.md` and `references/` folders under [skills/](skills/)
-- 🐛 **Issues & requests:** [GitHub Issues](https://github.com/FCBGP/awsome-idr-skills/issues)
-- 💼 **Enterprise support:** [K-Dense](https://k-dense.ai/)
-- 📣 **Stay in the loop:** [X](https://x.com/k_dense_ai) · [LinkedIn](https://www.linkedin.com/company/k-dense-inc) · [YouTube](https://www.youtube.com/@K-Dense-Inc)
-
-<!--
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=FCBGP/awsome-idr-skills&type=date&legend=top-left)](https://www.star-history.com/#FCBGP/awsome-idr-skills&type=date&legend=top-left)
--->
