@@ -96,6 +96,18 @@ This symlinks **every directory under `skills/`** into `~/.agents/skills` (one l
 
 - Removes any existing non-symlink entry at the target path first, so it won't shadow the new link.
 - Reports each skill as it links and a final count.
+- Supports command-line options:
+  - `-h` / `--help` — print usage information and a short intro, then exit.
+  - `-d DIR` / `--dest DIR` — set the destination directory (defaults to `~/.agents/skills`).
+
+Examples:
+
+```bash
+./link_skills.sh              # link into ~/.agents/skills (default)
+./link_skills.sh -h           # show help
+./link_skills.sh -d /tmp/sk   # link into /tmp/sk
+./link_skills.sh --dest /tmp/sk
+```
 
 Re-run it anytime after pulling new skills to refresh the links.
 
