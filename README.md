@@ -83,6 +83,22 @@ git clone https://github.com/FCBGP/awsome-idr-skills.git .agents/skills/scientif
 
 **That's it.** Your agent discovers relevant skills automatically, and you can always invoke one by name in your prompt.
 
+### Option 4: Symlink with `link_skills.sh` (local checkout)
+
+If you already have this repository checked out (or cloned) and want the skills live under `~/.agents/skills` without duplicating files, use the included helper script:
+
+```bash
+cd <repo-root>
+./link_skills.sh
+```
+
+This symlinks **every directory under `skills/`** into `~/.agents/skills` (one link per skill), keeping a single source of truth. `~/.agents/skills` must already exist (Claude Code creates it). The script:
+
+- Removes any existing non-symlink entry at the target path first, so it won't shadow the new link.
+- Reports each skill as it links and a final count.
+
+Re-run it anytime after pulling new skills to refresh the links.
+
 ---
 
 ## ⚙️ Prerequisites
